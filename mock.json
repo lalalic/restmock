@@ -1,0 +1,23 @@
+{
+    "port":9080,
+    "routes":[
+        {
+            "path":"/test",
+            "type":"get",
+            "response":"hello"
+        },
+        {
+            "path":"/a",
+            "type":"get",
+            "response":{
+                "_id":1,
+                "foo":"bar"
+            }
+        },
+        {
+            "path":"/static",
+            "type":"static",
+            "response":"www"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "httpmock",
+  "description": "a quick REST and static server",
+  "version": "0.0.1",
+  "author": {
+    "name": "Raymond Li",
+    "email": "lalalic@139.com"
+  },
+  "dependencies": {
+    "express": "^4.12.4"
+  },
+  "keywords": [
+    "mock",
+    "http",
+    "rest",
+    "restmock",
+    "mockrest",
+    "httpmock",
+    "mockhttp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lalalic/restmock"
+  },
+  "engines": {
+    "node": ">= 0.4.4"
+  },
+  "bin":{
+      "restmock":"./bin/mock.js"
+  },
+  "readme": "README.md"
+}
