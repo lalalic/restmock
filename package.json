@@ -1,5 +1,5 @@
 {
-  "name": "httpmock",
+  "name": "restmock",
   "description": "a quick REST and static server",
   "version": "0.0.1",
   "author": {
