@@ -8,13 +8,14 @@ XMLHttpRequest.prototype.send=function(){
     var pathname=(new URL(this.url)).pathname
     for(var i=0, len=routes.length, t; i<len; i++){
         t=routes[i]
-        if(t.path==pathname && t.type.toUpperCase()==this.method){
+        if(t.path==pathname && t.type.toUpperCase()==this.method.toUpperCase()){
             var response=t.response,
                 type=(typeof(reponse)=='string' ? 'text/plain' :'application/json');
-
+            console.log(this)
             this.respond(200, {"Content-Type": type}, JSON.stringify(response));
             return
         }
     }
+    console.error(this)
     this.respond(404, {"Content-Type":'text/plain'}, "not found")
 }
