@@ -1,11 +1,12 @@
 var XMLHttpRequest=window.XMLHttpRequest=require('fakexmlhttprequest')
 var conf=require('./mock.json'), //which will be replaced with mock.json in target project
-    routes=conf.routes;
+    routes=conf.routes,
+    URL=require('url');
 
 var _send=XMLHttpRequest.prototype.send
 XMLHttpRequest.prototype.send=function(){
     _send.apply(this,arguments)
-    var pathname=(new URL(this.url)).pathname
+    var pathname=URL.parse(this.url).pathname
     for(var i=0, len=routes.length, t; i<len; i++){
         t=routes[i]
         if(t.path==pathname && t.type.toUpperCase()==this.method.toUpperCase()){
