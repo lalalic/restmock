@@ -23,15 +23,12 @@ module.exports=function (confFile){
                 res.json(route.response)
             })
         }
+        console.log(`${type} ${route.path}`)
     }
 
     routes.forEach(makeRoute)
 
     return app
-        .get('/_create',function(req,res){
-            makeRoute(req.query)
-            res.send("new route created: "+req.query.path)
-        })
         .listen(port,function(){
             console.log("server is listening on "+port)
         });

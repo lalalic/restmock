@@ -1,7 +1,7 @@
 {
   "name": "restmock",
   "description": "a quick REST and static server, or mock rest in browser side",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": {
     "name": "Raymond Li",
     "email": "lalalic@139.com"
@@ -13,7 +13,7 @@
   },
   "browser": "browser.js",
   "browserify": {
-    "transform": ["./mock.js"]
+
   },
   "keywords": [
     "mock",
