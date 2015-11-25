@@ -1,5 +1,5 @@
 var XMLHttpRequest=window.XMLHttpRequest=require('fakexmlhttprequest')
-var conf=require('./mock.json'), //which will be replaced with mock.json in target project
+var conf=require(process.cwd()+'/mock.json'), //which will be replaced with mock.json in target project
     routes=conf.routes,
     URL=require('url');
 

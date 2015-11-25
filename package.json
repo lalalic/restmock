@@ -8,13 +8,10 @@
   },
   "dependencies": {
     "express": "^4.12.4",
-    "fakexmlhttprequest": "0.0.1",
-	"through": "^2.3.7"
+    "fakexmlhttprequest": "0.0.1"
   },
   "browser": "browser.js",
-  "browserify": {
-
-  },
+  "browserify": {},
   "keywords": [
     "mock",
     "http",
